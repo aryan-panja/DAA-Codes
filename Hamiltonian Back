@@ -1,3 +1,35 @@
+
+Certainly! Here's the pseudo code written in words:
+
+1. **isSafe Function**:
+   - This function checks whether adding a vertex `v` to the current position `pos` in the path is safe.
+   - It verifies if there is an edge between the last vertex in the path and vertex `v` to ensure connectivity.
+   - Additionally, it checks if vertex `v` is already included in the path to avoid cycles.
+
+2. **hamCycleUtil Function**:
+   - This recursive function is used to find the Hamiltonian cycle.
+   - If all vertices have been visited (`pos == V`), it checks if there is an edge between the last and first vertices in the path to form a cycle.
+   - It iterates through all vertices as potential next vertices in the Hamiltonian cycle, exploring all possible paths.
+
+3. **hamCycle Function**:
+   - This main function orchestrates the process of finding the Hamiltonian cycle.
+   - It initializes the path with all vertices set to -1 except the first vertex.
+   - Then, it calls the `hamCycleUtil` function to find the Hamiltonian cycle, starting from the second vertex.
+   - If no Hamiltonian cycle is found, it prints "Solution does not exist".
+
+4. **printSolution Function**:
+   - This function prints the Hamiltonian cycle if one exists.
+   - It displays the vertices of the Hamiltonian cycle found.
+
+5. **Main Function**:
+   - In the `main` function:
+     - Two sample graphs, `graph1` and `graph2`, are initialized as adjacency matrices.
+     - The `hamCycle` function is called for each graph to find and print the Hamiltonian cycle if it exists.
+
+This pseudo code outlines the steps involved in finding the Hamiltonian cycle in a graph and printing the result accordingly.
+
+
+
 #include <iostream>
 using namespace std;
 
